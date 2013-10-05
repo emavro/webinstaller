@@ -31,9 +31,9 @@ class PlgInstallerWebinstaller extends JPlugin
 	
 	public function onInstallerViewBeforeFirstTab()
 	{
-		$app =& JFactory::getApplication();
+		$app = JFactory::getApplication();
  
-		$lang = &JFactory::getLanguage();
+		$lang = JFactory::getLanguage();
 		$lang->load('plg_installer_webinstaller', JPATH_ADMINISTRATOR);
 		
 		$this->getChanges();
