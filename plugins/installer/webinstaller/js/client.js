@@ -54,7 +54,7 @@ Joomla.loadweb = function(url) {
 				if (response.data.pluginuptodate == 0) {
 					txt = apps_updateavail1;
 				}
-				jQuery('#myTabContent').prepend(jQuery('<div class="alert alert-info j-jed-message" style="margin-bottom: 20px; line-height: 2em; color:#333333;">'+txt+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn" type="button" value="'+btn+'" onclick="Joomla.submitbuttonInstallWebInstaller()" /></div>'));
+				jQuery('#web').prepend(jQuery('<div class="alert alert-info j-jed-message" style="margin-bottom: 20px; line-height: 2em; color:#333333;">'+txt+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn" type="button" value="'+btn+'" onclick="Joomla.submitbuttonInstallWebInstaller()" /></div>'));
 			}
 			if (jQuery('#myTabContent').length) {
 				jQuery.event.trigger("ajaxStop");

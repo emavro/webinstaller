@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.2" type="plugin" group="installer">
-	<name>plg_system_webinstaller</name>
+<extension version="3.2" type="plugin" group="installer" method="upgrade">
+	<name>Installer - Install from Web</name>
 	<author>Joomla! Project</author>
 	<creationDate>4 October 2013</creationDate>
 	<copyright>Copyright (C) 2013 Open Source Matters. All rights reserved.</copyright>
@@ -15,8 +15,12 @@
 		<folder>js</folder>
 		<folder>css</folder>
 	</files>
-	<languages>
-		<language tag="en-GB">en-GB.plg_installer_webinstaller.ini</language>
-		<language tag="en-GB">en-GB.plg_installer_webinstaller.sys.ini</language>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_installer_webinstaller.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_installer_webinstaller.sys.ini</language>
 	</languages>
+	<scriptfile>webinstaller.script.php</scriptfile>
+	<updateservers>
+		<server type="extension" priority="1" name="WebInstaller Update Site">http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml</server>
+	</updateservers>
 </extension>

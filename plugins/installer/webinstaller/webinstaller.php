@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Plugin
- * @subpackage  System.webinstaller
+ * @subpackage  Installer.webinstaller
  *
  * @copyright   Copyright (C) 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
@@ -24,16 +24,16 @@ class PlgInstallerWebinstaller extends JPlugin
 	private $_installfrom = null;
 	private $_plugin_version = '1.0.0';
 
-	public function onInstallerBeforeDisplay($showJedAndWebInstaller)
+	public function onInstallerBeforeDisplay(&$showJedAndWebInstaller)
 	{
 		$showJedAndWebInstaller = false;
 	}
 	
 	public function onInstallerViewBeforeFirstTab()
 	{
-		$app =& JFactory::getApplication();
+		$app = JFactory::getApplication();
  
-		$lang = &JFactory::getLanguage();
+		$lang = JFactory::getLanguage();
 		$lang->load('plg_installer_webinstaller', JPATH_ADMINISTRATOR);
 		
 		$this->getChanges();
