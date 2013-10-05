@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="plugin" group="installer">
-	<name>plg_installer_webinstaller</name>
+	<name>Installer - Install from Web</name>
 	<author>Efthimios Mavrogeorgiadis</author>
 	<creationDate>4 October 2013</creationDate>
 	<copyright>Copyright (C) 2013 Efthimios Mavrogeorgiadis. All rights reserved.</copyright>
