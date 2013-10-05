@@ -110,7 +110,7 @@ jQuery(document).ready(function() {
 
 	if (!apps_is_hathor)
 	{
-		if (apps_installfrom_url == '' && (localStorage.getItem('tab-href') == 'undefined' || !localStorage.getItem('tab-href') || localStorage.getItem('tab-href') == '#web'))
+		if (apps_installfrom_url == '' && (localStorage.getItem('tab-href') == null || localStorage.getItem('tab-href') == 'undefined' || !localStorage.getItem('tab-href') || localStorage.getItem('tab-href') == '#web'))
 		{
 			jQuery('#myTabTabs li').each(function(index, value){
 				value.removeClass('active');
