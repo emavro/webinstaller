@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="plugin" group="installer">
 	<name>plg_system_webinstaller</name>
-	<author>Joomla! Project</author>
+	<author>Efthimios Mavrogeorgiadis</author>
 	<creationDate>4 October 2013</creationDate>
-	<copyright>Copyright (C) 2013 Open Source Matters. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2013 Efthimios Mavrogeorgiadis. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-	<authorEmail>admin@joomla.org</authorEmail>
-	<authorUrl>www.joomla.org</authorUrl>
+	<authorEmail>admin@iota.gr</authorEmail>
+	<authorUrl>www.iota.gr</authorUrl>
 	<version>1.0.0</version>
 	<description>PLG_INSTALLER_WEBINSTALLER_XML_DESCRIPTION</description>
 	<files>
@@ -19,4 +19,7 @@
 		<language tag="en-GB">en-GB.plg_installer_webinstaller.ini</language>
 		<language tag="en-GB">en-GB.plg_installer_webinstaller.sys.ini</language>
 	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="WebInstaller Update Site">http://www.iota.gr/data/joomla/webinstaller/update.xml</server>
+	</updateservers>
 </extension>
