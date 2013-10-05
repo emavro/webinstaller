@@ -190,7 +190,7 @@ END;
 ?>
 			<div class="clr"></div>
 			<fieldset class="uploadform">
-				<legend><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_FROM_WEB', true); ?></legend>
+				<legend><?php echo JText::_('COM_INSTALLER_INSTALL_FROM_WEB', true); ?></legend>
 				<div id="jed-container">
 					<div id="mywebinstaller" style="display:none">
 						<a href="#"><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_LOAD_APPS'); ?></a>
@@ -219,7 +219,7 @@ END;
 		}
 		else
 		{
-			echo JHtml::_('bootstrap.addTab', 'myTab', 'web', JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_FROM_WEB', true));
+			echo JHtml::_('bootstrap.addTab', 'myTab', 'web', JText::_('COM_INSTALLER_INSTALL_FROM_WEB', true));
 ?>
 				<div id="jed-container" class="tab-pane">
 					<div class="well" id="web-loader">
