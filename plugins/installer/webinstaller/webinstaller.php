@@ -57,8 +57,8 @@ class PlgInstallerWebinstaller extends JPlugin
 		$apps_dev_level = base64_encode($ver->DEV_LEVEL);
 		$btntxt = str_replace("'", "\'", JText::_('COM_INSTALLER_MSG_INSTALL_ENTER_A_URL', true));
 		$pv = base64_encode($this->_plugin_version);
-		$updatestr1 = str_replace("'", "\'", JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_UPDATE_AVAILABLE', true));
-		$obsoletestr = str_replace("'", "\'", JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_OBSOLETE', true));
+		$updatestr1 = str_replace("'", "\'", JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_UPDATE_AVAILABLE', true));
+		$obsoletestr = str_replace("'", "\'", JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_OBSOLETE', true));
 		$updatestr2 = str_replace("'", "\'", JText::_('JLIB_INSTALLER_UPDATE', true));
 
 		$javascript = <<<END
@@ -196,17 +196,17 @@ END;
 						<a href="#"><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_LOAD_APPS'); ?></a>
 					</div>
 					<div class="well" id="web-loader" style="display:none">
-						<h2><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING'); ?></h2>
+						<h2><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING'); ?></h2>
 					</div>
 					<div class="alert alert-error" id="web-loader-error" style="display:none">
-						<a class="close" data-dismiss="alert">×</a><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING_ERROR'); ?>
+						<a class="close" data-dismiss="alert">×</a><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING_ERROR'); ?>
 					</div>
 				</div>
 				<fieldset class="uploadform" id="uploadform-web" style="display:none">
 					<div class="control-group">
-						<strong><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM'); ?></strong><br />
-						<span id="uploadform-web-name-label"><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_NAME'); ?></span> <span id="uploadform-web-name"></span><br />
-						<?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_URL'); ?> <span id="uploadform-web-url"></span>
+						<strong><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM'); ?></strong><br />
+						<span id="uploadform-web-name-label"><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_NAME'); ?>:</span> <span id="uploadform-web-name"></span><br />
+						<?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_URL'); ?>: <span id="uploadform-web-url"></span>
 					</div>
 					<div class="form-actions">
 						<input type="button" class="btn btn-primary" value="<?php echo JText::_('COM_INSTALLER_INSTALL_BUTTON'); ?>" onclick="Joomla.submitbutton<?php echo $installfrom != '' ? 4 : 5; ?>()" />
@@ -223,18 +223,18 @@ END;
 ?>
 				<div id="jed-container" class="tab-pane">
 					<div class="well" id="web-loader">
-						<h2><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING'); ?></h2>
+						<h2><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING'); ?></h2>
 					</div>
 					<div class="alert alert-error" id="web-loader-error" style="display:none">
-						<a class="close" data-dismiss="alert">×</a><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING_ERROR'); ?>
+						<a class="close" data-dismiss="alert">×</a><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_LOADING_ERROR'); ?>
 					</div>
 				</div>
 	
 				<fieldset class="uploadform" id="uploadform-web" style="display:none">
 					<div class="control-group">
-						<strong><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM'); ?></strong><br />
-						<span id="uploadform-web-name-label"><?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_NAME'); ?></span> <span id="uploadform-web-name"></span><br />
-						<?php echo JText::_('PLG_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_URL'); ?> <span id="uploadform-web-url"></span>
+						<strong><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM'); ?></strong><br />
+						<span id="uploadform-web-name-label"><?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_NAME'); ?>:</span> <span id="uploadform-web-name"></span><br />
+						<?php echo JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_WEB_CONFIRM_URL'); ?>: <span id="uploadform-web-url"></span>
 					</div>
 					<div class="form-actions">
 						<input type="button" class="btn btn-primary" value="<?php echo JText::_('COM_INSTALLER_INSTALL_BUTTON'); ?>" onclick="Joomla.submitbutton<?php echo $installfrom != '' ? 4 : 5; ?>()" />
