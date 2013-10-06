@@ -15,10 +15,6 @@
 		<folder>js</folder>
 		<folder>css</folder>
 	</files>
-	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.plg_installer_webinstaller.ini</language>
-		<language tag="en-GB">en-GB/en-GB.plg_installer_webinstaller.sys.ini</language>
-	</languages>
 	<scriptfile>webinstaller.script.php</scriptfile>
 	<updateservers>
 		<server type="extension" priority="1" name="WebInstaller Update Site">http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml</server>
