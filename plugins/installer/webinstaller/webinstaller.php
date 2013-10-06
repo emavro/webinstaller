@@ -35,12 +35,16 @@ class PlgInstallerWebinstaller extends JPlugin
  
 		$lang = JFactory::getLanguage();
 		$lang->load('plg_installer_webinstaller', JPATH_ADMINISTRATOR);
-		
-		$this->getChanges();
+		if (!$this->params->get('tab_position', 0)) {
+			$this->getChanges();
+		}
 	}
 	
 	public function onInstallerViewAfterLastTab()
 	{
+		if ($this->params->get('tab_position', 0)) {
+			$this->getChanges();
+		}
 		$ishathor = $this->isHathor() ? 1 : 0;
 		$installfrom = $this->getInstallFrom();
 		$installfromon = $installfrom ? 1 : 0;
@@ -107,7 +111,14 @@ jQuery(document).ready(function() {
 
 	if (!apps_is_hathor)
 	{
-		if (apps_installfrom_url == '' && (localStorage.getItem('tab-href') == null || localStorage.getItem('tab-href') == 'undefined' || !localStorage.getItem('tab-href') || localStorage.getItem('tab-href') == '#web'))
+		if(typeof jQuery('#myTabTabs a[href="'+localStorage.getItem('tab-href')+'"]').prop('tagName') == 'undefined' ||
+			localStorage.getItem('tab-href') == null ||
+			localStorage.getItem('tab-href') == 'undefined' ||
+			!localStorage.getItem('tab-href')) {
+			window.localStorage.setItem('tab-href', jQuery('#myTabTabs a').get(0).href.replace(/^.+?#/, '#'));
+		}
+	
+		if (apps_installfrom_url == '' && localStorage.getItem('tab-href') == '#web')
 		{
 			jQuery('#myTabTabs li').each(function(index, value){
 				value.removeClass('active');
@@ -119,13 +130,6 @@ jQuery(document).ready(function() {
 				jQuery(eventpoint).click();
 			}
 		}
-
-		jQuery('ul#submenu li').click(function (event){
-			if (jQuery('#myTabTabs a[href="#web"]').closest('li').hasClass('active'))
-			{
-				jQuery('#myTabTabs a[href="#web"]').click();
-			}
-		});
 	}
 });
 

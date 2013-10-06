@@ -19,4 +19,21 @@
 	<updateservers>
 		<server type="extension" priority="1" name="WebInstaller Update Site">http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml</server>
 	</updateservers>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="tab_position" type="radio"
+					class="btn-group"
+					default="0"
+					description="PLG_INSTALLER_WEBINSTALLER_TAB_POSITION_DESC"
+					label="PLG_INSTALLER_WEBINSTALLER_TAB_POSITION_LABEL"
+				>
+					<option value="0">PLG_INSTALLER_WEBINSTALLER_TAB_POSITION_FIRST</option>
+					<option value="1">PLG_INSTALLER_WEBINSTALLER_TAB_POSITION_LAST</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
 </extension>
