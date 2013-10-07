@@ -22,7 +22,6 @@ class PlgInstallerWebinstaller extends JPlugin
 
 	private $_hathor = null;
 	private $_installfrom = null;
-	private $_plugin_version = '1.0.0';
 
 	public function onInstallerBeforeDisplay(&$showJedAndWebInstaller)
 	{
@@ -53,6 +52,9 @@ class PlgInstallerWebinstaller extends JPlugin
 		$ver = new JVersion;
 		$min = JFactory::getConfig()->get('debug') ? '' : '.min';
 
+		$installer = new JInstaller();
+		$manifest = $installer->isManifest(JPATH_PLUGINS . DIRECTORY_SEPARATOR . 'installer' . DIRECTORY_SEPARATOR . 'webinstaller' . DIRECTORY_SEPARATOR . 'webinstaller.xml');
+
 		$apps_base_url = addslashes($this->appsBaseUrl);
 		$apps_installat_url = base64_encode(JURI::current(true) . '?option=com_installer&view=install');
 		$apps_installfrom_url = addslashes($installfrom);
@@ -60,7 +62,7 @@ class PlgInstallerWebinstaller extends JPlugin
 		$apps_release = base64_encode($ver->RELEASE);
 		$apps_dev_level = base64_encode($ver->DEV_LEVEL);
 		$btntxt = str_replace("'", "\'", JText::_('COM_INSTALLER_MSG_INSTALL_ENTER_A_URL', true));
-		$pv = base64_encode($this->_plugin_version);
+		$pv = base64_encode($manifest->version);
 		$updatestr1 = str_replace("'", "\'", JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_UPDATE_AVAILABLE', true));
 		$obsoletestr = str_replace("'", "\'", JText::_('COM_INSTALLER_WEBINSTALLER_INSTALL_OBSOLETE', true));
 		$updatestr2 = str_replace("'", "\'", JText::_('JLIB_INSTALLER_UPDATE', true));
